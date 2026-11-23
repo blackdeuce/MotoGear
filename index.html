@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MotoGear motorcycle accessories showcase.">
+    <title>MotoGear | Motorcycle Accessories</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#home" class="logo">MOTO<span>GEAR</span></a>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#accessories">Accessories</a>
+        </nav>
+        <div class="nav-buttons">
+            <button class="btn btn-outline" type="button" data-page="login">Login</button>
+            <button class="btn btn-orange" type="button" data-page="register">Register</button>
+        </div>
+    </header>
+
+    <main id="homePage">
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">RIDE WITH CONFIDENCE</p>
+                <h1>GEAR UP.<br><span>RIDE FREE.</span></h1>
+                <p class="hero-description">
+                    Discover motorcycle accessories and riding gear
+                    for people who live for the open road.
+                </p>
+                <a href="#accessories" class="btn btn-orange">Explore Collection</a>
+            </div>
+        </section>
+
+        <section class="accessories" id="accessories">
+            <div class="section-heading">
+                <p class="eyebrow">OUR COLLECTION</p>
+                <h2>RIDER <span>ESSENTIALS</span></h2>
+                <p>A visual showcase of gear, style and riding culture.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=900"
+                         alt="Motorcycle and riding equipment" loading="lazy">
+                    <div class="product-info">
+                        <h3>Riding Helmets</h3>
+                        <p>Protection-inspired style for every ride.</p>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=900"
+                         alt="Motorcycle gear and accessories" loading="lazy">
+                    <div class="product-info">
+                        <h3>Riding Gear</h3>
+                        <p>Made for the road and the rider.</p>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558980394-0c9d8a1d1b5a?w=900"
+                         alt="Motorcycle close-up" loading="lazy">
+                    <div class="product-info">
+                        <h3>Bike Accessories</h3>
+                        <p>Details that complete your riding setup.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <a href="#home" class="logo">MOTO<span>GEAR</span></a>
+            <p>Built for riders. Inspired by freedom.</p>
+            <p class="copyright">© 2026 MotoGear. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <section id="loginPage" class="auth-section hidden" aria-labelledby="loginTitle">
+        <div class="auth-card">
+            <button class="back-button" type="button" data-page="home">← Back to Home</button>
+            <p class="eyebrow">WELCOME BACK</p>
+            <h2 id="loginTitle">RIDER <span>LOGIN</span></h2>
+            <p class="auth-description">Login to your MotoGear account.</p>
+            <form id="loginForm">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" name="email"
+                       placeholder="Enter your email" autocomplete="email" required>
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password"
+                       placeholder="Enter your password" autocomplete="current-password"
+                       minlength="8" required>
+                <button type="submit" class="btn btn-orange full-width">LOGIN</button>
+            </form>
+            <p class="auth-switch">Don't have an account?
+                <a href="#register" data-page="register">Register</a>
+            </p>
+            <p id="loginMessage" class="message" role="status" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section id="registerPage" class="auth-section hidden" aria-labelledby="registerTitle">
+        <div class="auth-card">
+            <button class="back-button" type="button" data-page="home">← Back to Home</button>
+            <p class="eyebrow">JOIN THE COMMUNITY</p>
+            <h2 id="registerTitle">CREATE <span>ACCOUNT</span></h2>
+            <p class="auth-description">Register with your email and password.</p>
+            <form id="registerForm">
+                <label for="registerEmail">Email Address</label>
+                <input type="email" id="registerEmail" name="email"
+                       placeholder="Enter your email" autocomplete="email" required>
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" name="password"
+                       placeholder="Create a password" autocomplete="new-password"
+                       minlength="8" required>
+                <button type="submit" class="btn btn-orange full-width">CREATE ACCOUNT</button>
+            </form>
+            <p class="auth-switch">Already have an account?
+                <a href="#login" data-page="login">Login</a>
+            </p>
+            <p id="registerMessage" class="message" role="status" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
