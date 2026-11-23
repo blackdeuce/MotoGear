@@ -39,8 +39,8 @@ pipeline {
                       $ECR_REGISTRY/$BACKEND_REPO:latest
 
                     docker build \
-                      -t $ECR_REGISTRY/$FRONTEND_REPO:$BUILD_NUMBER \
-                      -f Dockerfile .
+  -t "$ECR_REGISTRY/$FRONTEND_REPO:$BUILD_NUMBER" \
+  -f "Dockerfile frontend." .
 
                     docker tag \
                       $ECR_REGISTRY/$FRONTEND_REPO:$BUILD_NUMBER \
