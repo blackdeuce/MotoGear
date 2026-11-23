@@ -77,6 +77,19 @@ pipeline {
             }
         }
 
+        stage('Pull Images from ECR') {
+    steps {
+        sh '''
+            set -eu
+
+            docker pull $ECR_REGISTRY/$BACKEND_REPO:$BUILD_NUMBER
+            docker pull $ECR_REGISTRY/$BACKEND_REPO:latest
+
+            docker pull $ECR_REGISTRY/$FRONTEND_REPO:$BUILD_NUMBER
+            docker pull $ECR_REGISTRY/$FRONTEND_REPO:latest
+        '''
+    }
+}
         stage('Deploy Containers') {
             steps {
                 sh '''
